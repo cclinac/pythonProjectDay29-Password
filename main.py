@@ -22,12 +22,8 @@ def generate_function():
     password_list += [random.choice(numbers) for char in range(nr_symbols)]
     password_list += [random.choice(symbols) for char in range(nr_numbers)]
 
-    print(password_list)
     random.shuffle(password_list)
-    print(password_list)
-    password = ""
-    for char in password_list:
-        password += char
+    password = "".join(password_list)
     passwd_entry.insert(0, password)
 
 
@@ -49,8 +45,6 @@ def add_function():
                 file.write(concatenate_data)
             webstie_entry.delete(0, tk.END)
             passwd_entry.delete(0, tk.END)
-
-
 
 
 # ---------------------------- UI SETUP ------------------------------- #
