@@ -18,9 +18,9 @@ def generate_function():
     nr_symbols = random.randint(2, 4)
     nr_numbers = random.randint(2, 4)
 
-    password_list += [random.choice(letters) for char in range(nr_letters)]
-    password_list += [random.choice(numbers) for char in range(nr_symbols)]
-    password_list += [random.choice(symbols) for char in range(nr_numbers)]
+    password_list += [random.choice(letters) for _ in range(nr_letters)]
+    password_list += [random.choice(numbers) for _ in range(nr_symbols)]
+    password_list += [random.choice(symbols) for _ in range(nr_numbers)]
 
     random.shuffle(password_list)
     password = "".join(password_list)
